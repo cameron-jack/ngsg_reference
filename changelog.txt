@@ -1,0 +1,5 @@
+v0.01.001
+Date: 17/12/2024 12:42:19 PM
+* NEW: Checks for non-ASCII characters and blank headers first
+* NEW: will not save the FASTA file if it fails its formating checks for any reason
+

@@ -1,9 +1,8 @@
-$VER = "v0.01.001"
+$VER = "v0.02.000"
 $DATE = "Date: {0}" -f (Get-Date)
 
 $COMMENT = @"
-* NEW: Checks for non-ASCII characters and blank headers first
-* NEW: will not save the FASTA file if it fails its formating checks for any reason
+* NEW: Allows for parentheses in sequences for variable sections
 "@
 
 Move-Item -Path "changelog.txt" -Destination "changelog_old.txt"

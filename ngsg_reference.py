@@ -64,6 +64,7 @@ def check_non_ascii(file_content, issues):
 def check_valid_sequence(file_content, issues):
     """
     Function to check that sequences contain only A, T, C, G, N
+    Extended to allow parentheses for variable sections
     Spaces and tabs will not be reported here, only checked in check_gaps
     Inputs: character stream, issues list passed by reference
     """
@@ -76,7 +77,7 @@ def check_valid_sequence(file_content, issues):
             sequence = line.strip().replace(" ", "").replace("\t", "")  # Clean the sequence
             #print(sequence)
             for idx, char in enumerate(sequence):
-                if char not in "AaTtCcGgNn":  # Check for valid characters
+                if char not in "AaTtCcGgNn()":  # Check for valid characters
                     issues.append({
                         'Issue Number': len(issues)+1,
                         'Line Number': line_num+1,
